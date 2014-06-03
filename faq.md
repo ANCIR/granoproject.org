@@ -3,7 +3,7 @@ layout: default
 title: Frequently Asked Questions
 ---
 
-### Who would use this?
+### Who is this made for?
 
 Grano is intended to become a power tool for investigations run by journalists and activists. At the moment, there is still a need for some customization of code in a new installation of grano, but we're hoping to reduce the amount of technical knowledge required to set up a new grano project so that any reporter or researcher can do it within a few minutes.
 
@@ -21,7 +21,7 @@ We hope to provide both a Popolo importer for grano and, later, a grano extensio
 
 ### Why don't you use a graph database?
 
-While grano does construct a graph of entities, it also manages a lot of other information: where the data came from, how much it can be trusted, how it changed over time, who can access it, etc. All of this is necessary for a journalistic use case, but doesn't really belong to the graph. In that sense, the graph is a metaphor, but in reality, a relational database is a better fit for the information we need to store.
+While grano does construct a graph of entities, it also manages a lot of other information: where the data came from, how much it can be trusted, how it changed over time, who can access it, etc. All of this is necessary for a journalistic use case, but doesn't really belong to the graph. In a sense, the graph is a metaphor for the tool. In reality, a relational database is a better fit for the complex information we need to store.
 
 At the same time, graph databases have great ways of querying the data, many of which need a lot of effort to run in a relational database. This is why we want to explore mirroring grano data into graph databases like Neo4J for improved query access.
 
