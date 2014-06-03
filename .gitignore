@@ -1,2 +1,5 @@
 static/vendor/*
+static/style/pygments.css
+
 _site/*
+pyenv/*

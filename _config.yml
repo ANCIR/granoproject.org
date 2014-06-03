@@ -1,6 +1,7 @@
 safe: true
 markdown: kramdown
 permalink: pretty
+pygments: true
 
 exclude:
     - Makefile
