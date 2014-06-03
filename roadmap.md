@@ -7,7 +7,7 @@ description: Planned functionality for grano, a toolkit that helps to map influe
 ## Improved user interface
 * Testing with non-technical users.
 * Workflow: published vs. draft objects for the Poderopedia use case.
-* Bulk editing and adding of entities and relations for manual entry [Poderopedia use](http://poderopedia.org/) case.
+* Bulk editing and adding of entities and relations for manual entry [Poderopedia use case](http://poderopedia.org/).
 * Internationalisation of the interface and localisation to Spanish
 * Various items: featured entities; entity images; WYSIWYG text editing
 
