@@ -12,3 +12,6 @@ install:
 	pip install Pygments
 	sudo npm install -g bower less
 	bower install
+
+serve:
+	jekyll serve -w
