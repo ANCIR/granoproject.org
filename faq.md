@@ -31,6 +31,9 @@ The reasons for not using linked data are, in many ways, similar to those for no
 
 ### Don't tools like this already exist?
 
-Many of them; we've even [created a list](/survey)! 
+Many of them; we've even [created a list](/survey)! Grano will set itself apart by focussing on the needs of journalists in terms of tracking the source and quality of data; by being modular and adaptable; and by being built as an 
+open source project, with contributors from many organisations.
+
+
 
 
