@@ -1,0 +1,13 @@
+{
+  "name": "granoproject.org",
+  "version": "0.0.1",
+  "main": "static/style/style.less",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0"
+  }
+}
