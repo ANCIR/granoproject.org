@@ -14,3 +14,4 @@ If you want to contribute, here are some ways to get started:
 * Explore our [GitHub organisation](https://github.com/granoproject) to see available extensions and experimental repositories. Consider contributing your own extension.
 * Follow [GranoProject](https://twitter.com/granoproject) on Twitter!
 
+By contributing to grano or any of the existing modules you agree to share your work on the terms of [the open source license used by the project](/license/).
