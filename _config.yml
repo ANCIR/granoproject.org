@@ -1,3 +1,10 @@
 safe: true
 markdown: kramdown
 permalink: pretty
+
+exclude:
+    - Makefile
+    - README.md
+    - bower.json
+    - static/style/style.less
+    - static/vendor
