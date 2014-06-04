@@ -1,9 +1,11 @@
 
 all: build
 
-build:
+assets:
 	pyenv/bin/pygmentize -S default -f html > static/style/pygments.css
 	lessc -x -ru static/style/style.less static/style/style.css
+
+build: assets
 	jekyll build
 
 install:
