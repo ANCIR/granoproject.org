@@ -1,3 +1,17 @@
+
 <ul class="nav">
-    <li><a href="#">Home</a></li>
+    {% for page in site.pages %}{% if page.menu_hide == %}{% if page.menu_parent == %}
+        <li>
+            <a href="{{page.url}}">
+                {% if page.menu_title %}{{page.menu_title}}{% else %}{{page.title}}{% endif %}
+            </a>
+            <ul>
+                {% for sub in site.pages %}{% if sub.menu_parent == page.path %}
+                    <li><a href="{{sub.url}}">
+                        {% if sub.menu_title %}{{sub.menu_title}}{% else %}{{sub.title}}{% endif %}
+                    </a></li>
+                {% endif %}{% endfor %}
+            </ul>
+        </li>
+    {% endif %}{% endif %}{% endfor %}
 </ul>
