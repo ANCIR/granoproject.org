@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Development roadmap
+menu_title: Roadmap
 description: Planned functionality for grano, a toolkit that helps to map influence in government and business.
+menu_parent: contributing/index.md
+permalink: roadmap/
 ---
 
 ## Improved user interface

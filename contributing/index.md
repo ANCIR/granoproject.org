@@ -1,9 +1,8 @@
 ---
 layout: default
 title: How to contribute
-menu: Contributing
+menu_title: Contributing
 parent: getting-started
-menu_order: 10
 ---
 
 Grano is a free software project, developed by coders, journalists and enthusiasts from all around the world. We rely on people contribute new ideas, bug fixes and modular extensions to build an investigative tools ecosystem.

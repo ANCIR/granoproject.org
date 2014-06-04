@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Frequently Asked Questions
+menu_title: FAQ
+menu_parent: about/index.md
+permalink: faq/
 ---
 
 ### Who is this made for?

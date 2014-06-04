@@ -2,6 +2,8 @@
 layout: default
 title: Features
 description: Features of grano which have already been implemented.
+menu_parent: about/index.md
+permalink: features/
 ---
 
 ## Backend
