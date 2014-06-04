@@ -12,7 +12,7 @@ Grano is intended to become a power tool for investigations run by journalists a
 
 ### What types of entities and relations are supported?
 
-Grano itself doesn't specify types of entities and relations, but rather gives users the option to model the data in the way that they need it for their work. To that end, project administrators can define so-called schemata for entities and relations. A typical schema might be for a person, or a family tie.
+Grano itself doesn't specify types of entities and relations, but rather gives users the option to model the data in the way that they need it for their work. Project administrators can define so-called [schemata for entities and relations](/docs/schema). A typical schema might be for a person entity, or a family tie relationship.
 
 In the future, we hope to define a small set of default schemata, based on external data standards such as [Popolo](http://popoloproject.com/), [Schema.org](http://schema.org) and [FOAF](http://www.foaf-project.org/). This way data from multiple projects could be shared and re-used easily. 
 
@@ -34,7 +34,7 @@ The reasons for not using linked data are, in many ways, similar to those for no
 
 ### Don't tools like this already exist?
 
-Many of them; we've even [created a list](/survey)! Grano will set itself apart by focussing on the needs of journalists in terms of tracking the source and quality of data; by being modular and adaptable; and by being built as an 
+Many of them; we've even [created a list](/about/alternatives)! Grano will set itself apart by focussing on the needs of journalists in terms of tracking the source and quality of data; by being modular and adaptable; and by being built as an 
 open source project, with contributors from many organisations.
 
 
