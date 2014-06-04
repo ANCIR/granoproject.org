@@ -110,6 +110,11 @@ body {
 footer {
     color: @footer-foreground;
     padding: 2em 0 2em 0;
+
+    a, a:hover {
+        color: @footer-foreground;
+        font-weight: 600;
+    }
 }
 
 
@@ -195,4 +200,28 @@ ul.nav.sidebar-menu {
 
 .claim {
     font-size: 1.3em;
+}
+
+.showcase {
+    padding: 1em 0 2em 0;
+    margin: 2em 0 1em 0;
+
+    background-color: @footer-background;
+    color: white;
+
+    h2 {
+        color: white;
+        margin-bottom: 2em;
+    }
+
+    a {
+        color: white;
+        font-weight: 600;
+    }
+
+    .caption {
+        margin-top: 1em;
+        padding-left: 1em;
+        font-size: 0.9em;
+    }
 }

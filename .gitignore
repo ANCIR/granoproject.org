@@ -3,3 +3,5 @@ static/style/pygments.css
 
 _site/*
 _env/*
+
+*.DS_Store

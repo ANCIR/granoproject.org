@@ -1,0 +1,24 @@
+
+- title: OpenInterests
+  url: http://openinterests.eu
+  image: /static/images/openinterests_sap.png
+  image_url: http://openinterests.eu/entities/CjeN90n3vO2Ygcw-sap-ag
+  description: >
+    <a href="http://openinterests.eu">OpenInterests</a> tracks interests in the
+    politics of the European Union.
+
+- title: Poderopedia on Grano
+  url: https://poderodemo.herokuapp.com/entities/HvhXSlFdAVTK8aY.html
+  image: /static/images/poder_bachelet.png
+  image_url: https://poderodemo.herokuapp.com/entities/HvhXSlFdAVTK8aY.html
+  description: >
+    Data from <a href="http://poderopedia.org">Poderopedia</a> browseable
+    and visualized through grano.
+
+- title: Grano UI
+  url: https://beta.grano.cc
+  image: /static/images/ui_merkel.png
+  image_url: 'http://beta.grano.cc/#/p/kompromatron/entities?schema=&q=merkel&preview=CZKrsk4iiwuSOIz'
+  description: >
+    Explore and edit data via <a href="/extensions">Grano UI</a>,
+    an administrative frontend.
