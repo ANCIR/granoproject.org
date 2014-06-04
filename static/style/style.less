@@ -1,3 +1,9 @@
+// Variables
+
+@footer-background: #000;
+@footer-foreground: #ddd;
+
+
 // Core variables and mixins
 @import "../vendor/bootstrap/less/variables.less";
 @import "../vendor/bootstrap/less/mixins.less";
@@ -73,9 +79,54 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 h2 {
     font-size: 1.3em;
+}
+
+// Footer 
+
+body {
+    background-color: @footer-background;
+}
+
+#page {
+    background-color: #fff;
+    padding: 0 0 3em 0;
+}
+
+footer {
+    color: @footer-foreground;
+    padding: 2em 0 2em 0;
+}
+
+
+// Side bar menu 
+
+ul.nav.sidebar-menu {
+
+    a, ul a {
+        font-weight: 600;
+        padding: 0.2em 0 0.2em 0;
+        display: block;
+        color: #999;
+
+        &:hover {
+            background-color: #fff;
+            text-decoration: none;
+            color: blue;
+        }
+    }
+
+    ul a {
+        font-weight: normal;
+    }
+
+    ul {
+        font-size: 0.9em;
+        padding: 0 0 0 1em;
+        list-style-type: none;
+    }
 }
