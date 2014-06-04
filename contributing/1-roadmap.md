@@ -7,6 +7,8 @@ menu_parent: contributing/index.md
 permalink: roadmap/
 ---
 
+This roadmap details some of the planned functionality for grano over the next few months. It is intended to give a high-level overview, while detailed descriptions and discussion is publicly available on the [issue tracker](https://github.com/granoproject/grano/issues).
+
 ## Improved user interface
 * Testing with non-technical users.
 * Workflow: published vs. draft objects for the Poderopedia use case.
