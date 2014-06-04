@@ -69,8 +69,7 @@ host = http://beta.grano.cc
 api_key = xxxxxxxxxxxxxxx
 {% endhighlight %}
 
-The interface in detail
------------------------
+## The interface in detail
 
 <div class="sphinx-include">
     {% include apidocs/rest_client.html %}

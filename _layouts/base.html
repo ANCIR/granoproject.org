@@ -5,27 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{page.title}} :: grano project</title>
+    <title>{{page.title}} - grano project</title>
     <meta name="description" content="{{page.description}}" />
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link href='/static/style/style.css' rel='stylesheet' type='text/css'>
      <!-- Beautification -->
     <link rel="shortcut icon" href="http://assets.pudo.org/img/favicon.ico">
   </head>
   <body>
     <div id="page">
-      <nav class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container container-fixed">
-          <a class="navbar-brand" href="/">grano</a>
-        </div>
-      </nav>
-      <div class="container container-fixed"> 
-        <div id="content">
-          {{ content }}
-        </div>
-      </div>
+      {{content}}
     </div>
     {% include footer.html %}
+    {% include ga.html %}
   </body>
 </html>

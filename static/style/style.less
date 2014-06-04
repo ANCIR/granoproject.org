@@ -1,6 +1,6 @@
 // Variables
 
-@footer-background: #000;
+@footer-background: #666;
 @footer-foreground: #ddd;
 
 
@@ -59,7 +59,7 @@
 @import "pygments.css";
 
 
-.container-fixed {
+.container-fixed, .jumbotron .container-fixed {
   margin: 0 auto;
   max-width: 800px;
 }
@@ -84,6 +84,16 @@ h1 {
 
 h2 {
     font-size: 1.3em;
+}
+
+// Header 
+
+.navbar.navbar-default {
+    background-color: #fff;
+
+    .navbar-brand {
+        color: #222;
+    }
 }
 
 // Footer 
@@ -113,10 +123,10 @@ ul.nav.sidebar-menu {
         display: block;
         color: #999;
 
-        &:hover {
+        &:hover, &.active {
             background-color: #fff;
             text-decoration: none;
-            color: blue;
+            color: @brand-primary;
         }
     }
 
@@ -149,6 +159,7 @@ ul.nav.sidebar-menu {
 
     code {
         color: #222;
+        padding: 0;
         background-color: inherit;
     }
 
@@ -169,4 +180,19 @@ ul.nav.sidebar-menu {
             padding: 0.2em 0 0.2em 1em;
         }
     }
+}
+
+
+
+// Home page specific items 
+
+.jumbotron {
+    h1, p {
+        font-weight: 300;
+        text-align: center;    
+    }
+}
+
+.claim {
+    font-size: 1.3em;
 }
