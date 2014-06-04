@@ -23,12 +23,12 @@ description: An open source toolkit for investigative reporters and researchers 
   <div class="container container-fixed">
     <h2>Built with Grano</h2>
     <div class="row">
-      {% for user in site.data.users %}
+      {% for example in site.data.examples %}
       <div class="col-md-4">
-        <a href="{{user.image_url}}">
-          <img src="{{user.image}}" class="img-responsive" alt="{{user.title}}">
+        <a href="{{example.image_url}}">
+          <img src="{{example.image}}" class="img-responsive" alt="{{example.title}}">
         </a>
-        <p class="caption">{{user.description}}</p>
+        <p class="caption">{{example.caption}}</p>
       </div>
       {% endfor %}
     </div>

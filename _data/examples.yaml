@@ -3,22 +3,36 @@
   url: http://openinterests.eu
   image: /static/images/openinterests_sap.png
   image_url: http://openinterests.eu/entities/CjeN90n3vO2Ygcw-sap-ag
-  description: >
+  caption: >
     <a href="http://openinterests.eu">OpenInterests</a> tracks interests in the
     politics of the European Union.
+  description: >
+    Who has influence in the European Union? Which interests are represented?
+    The site combines data from European procurement, lobbying, expert groups
+    and expenditure to generate a power network spanning institutions, 
+    companies and individuals.
 
-- title: Poderopedia on Grano
+- title: PoderoGrano
   url: https://poderodemo.herokuapp.com/entities/HvhXSlFdAVTK8aY.html
   image: /static/images/poder_bachelet.png
   image_url: https://poderodemo.herokuapp.com/entities/HvhXSlFdAVTK8aY.html
-  description: >
+  caption: >
     Data from <a href="http://poderopedia.org">Poderopedia</a> browseable
     and visualized through grano.
+  description: >
+    Based on a data export of the fantastic Poderopedia site, this experimental
+    prototype maps out who is who in Chilean politics, including business and 
+    political leaders.
 
 - title: Grano UI
   url: https://beta.grano.cc
   image: /static/images/ui_merkel.png
   image_url: 'http://beta.grano.cc/#/p/kompromatron/entities?schema=&q=merkel&preview=CZKrsk4iiwuSOIz'
-  description: >
+  caption: >
     Explore and edit data via <a href="/extensions">Grano UI</a>,
     an administrative frontend.
+  description: >
+    While grano itself only provides an API, this extension provides an easy
+    way to create, manage and explore entities and relationships. This example
+    links to the Kompromatron dataset, which combines data about German
+    politicans and political institutions.
