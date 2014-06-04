@@ -6,11 +6,13 @@ menu_parent: docs/index.md
 permalink: install/
 ---
 
-These instructions are for making a developer installation of ``grano``. If you want to set up a production site you'll need to tweak these instructions to run the application behind a proper web server (e.g. using [gunicorn](http://docs.gunicorn.org/en/latest/)).
+Grano is intended to be easy to install and modify. If you just want to experiment with the application, you can also explore the development instance at [beta.grano.cc](http://beta.grano.cc).
+
+These instructions are for making a developer installation of grano. If you want to set up a production site you'll need to tweak these instructions to run the application behind a proper web server (e.g. using [gunicorn](http://docs.gunicorn.org/en/latest/)).
 
 ## Dependencies
 
-Before installing ``grano``, make sure you have the following dependencies available on your system (consider using [Vagrant](http://www.vagrantup.com/) or [Docker](http://docker.io) to isolate the project):
+Before installing grano, make sure you have the following dependencies available on your system (consider using [Vagrant](http://www.vagrantup.com/) or [Docker](http://docker.io) to isolate the project):
 
 * Python 2.7 and [virtualenv](http://www.virtualenv.org/en/latest/)
 * Postgres 9.3 or newer
