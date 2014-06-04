@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About Grano
-menu_title: Introduction
+title: Getting Started
+menu_title: Getting Started
 ---
 
 This is a general intro page

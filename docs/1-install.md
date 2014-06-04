@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Installation Guide
-menu_title: Install
+menu_title: Installation
 menu_parent: docs/index.md
+permalink: install/
 ---
 
 These instructions are for making a developer installation of ``grano``. If you want to set up a production site you'll need to tweak these instructions to run the application behind a proper web server (e.g. using [gunicorn](http://docs.gunicorn.org/en/latest/)).
