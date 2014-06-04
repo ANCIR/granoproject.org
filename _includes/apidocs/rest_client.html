@@ -1,0 +1,552 @@
+
+  <div class="section" id="grano">
+<h1>Grano<a class="headerlink" href="#grano" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="granoclient.Grano">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">Grano</tt><big>(</big><em>api_host=None</em>, <em>api_key=None</em>, <em>api_prefix='/api/1/'</em><big>)</big><a class="reference internal" href="_modules/granoclient.html#Grano"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#granoclient.Grano" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grano client library. This class provides basic access to many of 
+the core APIs for grano, including projects, and a global view of 
+entities and relations (seldomly useful, consider using the project-filtered
+versions instead.)</p>
+<p>The client library can be configured directly, or through a configuration
+file (<tt class="docutils literal"><span class="pre">~/.grano.ini</span></tt>) and a set of environment variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>api_host</strong> &#8211; (optional) host name URL to connect to, without any path 
+information (e.g. <tt class="docutils literal"><span class="pre">http://grano.io</span></tt>).</li>
+<li><strong>api_key</strong> &#8211; (optional) API key of the user which is running the
+requests.</li>
+<li><strong>api_prefix</strong> &#8211; (optional) path prefix of the grano API, usually
+<tt class="docutils literal"><span class="pre">/api/1/</span></tt>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="granoclient.Grano.entities">
+<tt class="descname">entities</tt><a class="reference internal" href="_modules/granoclient.html#Grano.entities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#granoclient.Grano.entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="#granoclient.EntityCollection" title="granoclient.EntityCollection"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.EntityCollection</span></tt></a> of all available 
+entities in this instance of grano.</p>
+<p>Consider using the <tt class="docutils literal"><span class="pre">entities</span></tt> property of a specific
+<a class="reference internal" href="#granoclient.Project" title="granoclient.Project"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Project</span></tt></a> instead.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Grano.get">
+<tt class="descname">get</tt><big>(</big><em>slug</em><big>)</big><a class="reference internal" href="_modules/granoclient.html#Grano.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#granoclient.Grano.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a project. Shortcut to <tt class="docutils literal"><span class="pre">Grano.projects.by_slug()</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>slug</strong> &#8211; the slug identifying the project to be retrieved.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Grano.projects">
+<tt class="descname">projects</tt><a class="reference internal" href="_modules/granoclient.html#Grano.projects"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#granoclient.Grano.projects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="#granoclient.ProjectCollection" title="granoclient.ProjectCollection"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.ProjectCollection</span></tt></a> of all available 
+projects in this instance of grano.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Grano.relations">
+<tt class="descname">relations</tt><a class="reference internal" href="_modules/granoclient.html#Grano.relations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#granoclient.Grano.relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="#granoclient.RelationCollection" title="granoclient.RelationCollection"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.RelationCollection</span></tt></a> of all available 
+relation in this instance of grano.</p>
+<p>Consider using the <tt class="docutils literal"><span class="pre">relations</span></tt> property of a specific
+<a class="reference internal" href="#granoclient.Project" title="granoclient.Project"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Project</span></tt></a> instead.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="projects">
+<h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="granoclient.ProjectCollection">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">ProjectCollection</tt><big>(</big><em>client</em><big>)</big><a class="headerlink" href="#granoclient.ProjectCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents all the <a class="reference internal" href="#granoclient.Project" title="granoclient.Project"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Project</span></tt></a> currently available
+in this instance of grano. Provides functionality to search for, filter
+and create elements.</p>
+<dl class="method">
+<dt id="granoclient.ProjectCollection.all">
+<tt class="descname">all</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.ProjectCollection.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over all available resources in the collection.
+This can also be done by just iterating over the collection:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.ProjectCollection.by_slug">
+<tt class="descname">by_slug</tt><big>(</big><em>slug</em><big>)</big><a class="headerlink" href="#granoclient.ProjectCollection.by_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a project based on its slug, i.e. its unique designation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>slug</strong> &#8211; the slug of the project to be retrieved.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.ProjectCollection.create">
+<tt class="descname">create</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#granoclient.ProjectCollection.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new project.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; A dictionary with the projects attributes, <tt class="docutils literal"><span class="pre">slug</span></tt> 
+and <tt class="docutils literal"><span class="pre">label</span></tt> are required.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.ProjectCollection.query">
+<tt class="descname">query</tt><big>(</big><em>params=None</em><big>)</big><a class="headerlink" href="#granoclient.ProjectCollection.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begin querying the collection. The query can further be refined
+using the methods of the returned <a class="reference internal" href="#granoclient.Query" title="granoclient.Query"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Query</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="granoclient.Project">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">Project</tt><big>(</big><em>client</em>, <em>data</em><big>)</big><a class="headerlink" href="#granoclient.Project" title="Permalink to this definition">¶</a></dt>
+<dd><p>A project within grano. This type serves as a namespace for use 
+cases of the application. Each project has its own schemata, entities and 
+relations.</p>
+<dl class="attribute">
+<dt id="granoclient.Project.entities">
+<tt class="descname">entities</tt><a class="headerlink" href="#granoclient.Project.entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of the <a class="reference internal" href="#granoclient.Entity" title="granoclient.Entity"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Entity</span></tt></a> associated with
+this project.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Project.relations">
+<tt class="descname">relations</tt><a class="headerlink" href="#granoclient.Project.relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of the <a class="reference internal" href="#granoclient.Relation" title="granoclient.Relation"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Relation</span></tt></a> associated with
+this project.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Project.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Project.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the resource from the server. This is useful when the resource is 
+a shortened index representation which needs to be traded in for a complete
+representation of the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Project.save">
+<tt class="descname">save</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Project.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the server with any local changes, then update the local version 
+with the returned value from the server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Project.schemata">
+<tt class="descname">schemata</tt><a class="headerlink" href="#granoclient.Project.schemata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of the <a class="reference internal" href="#granoclient.Schema" title="granoclient.Schema"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Schema</span></tt></a> associated with
+this project.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="schemata">
+<h1>Schemata<a class="headerlink" href="#schemata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="granoclient.SchemaCollection">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">SchemaCollection</tt><big>(</big><em>client</em>, <em>project_slug</em><big>)</big><a class="headerlink" href="#granoclient.SchemaCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents all the <a class="reference internal" href="#granoclient.Schema" title="granoclient.Schema"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Schema</span></tt></a> currently available
+in a given project. Provides functionality to search for, filter
+and create elements.</p>
+<dl class="method">
+<dt id="granoclient.SchemaCollection.all">
+<tt class="descname">all</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.SchemaCollection.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over all available resources in the collection.
+This can also be done by just iterating over the collection:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.SchemaCollection.by_name">
+<tt class="descname">by_name</tt><big>(</big><em>name</em><big>)</big><a class="headerlink" href="#granoclient.SchemaCollection.by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a schema based on its name, i.e. its unique designation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> &#8211; the name of the project to be retrieved.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.SchemaCollection.create">
+<tt class="descname">create</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#granoclient.SchemaCollection.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new schema.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; A dictionary with the schemas attributes, <tt class="docutils literal"><span class="pre">name</span></tt> 
+and <tt class="docutils literal"><span class="pre">label</span></tt> are required, but several <tt class="docutils literal"><span class="pre">attributes</span></tt> should
+be given. See <em class="xref std std-ref">schema</em> for details.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.SchemaCollection.query">
+<tt class="descname">query</tt><big>(</big><em>params=None</em><big>)</big><a class="headerlink" href="#granoclient.SchemaCollection.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begin querying the collection. The query can further be refined
+using the methods of the returned <a class="reference internal" href="#granoclient.Query" title="granoclient.Query"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Query</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="granoclient.Schema">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">Schema</tt><big>(</big><em>client</em>, <em>base_endpoint</em>, <em>data</em><big>)</big><a class="headerlink" href="#granoclient.Schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>A schema within grano. Schemata define the types of entities and
+relations that are stored within a grano project. See also 
+<em class="xref std std-ref">schema</em>.</p>
+<dl class="method">
+<dt id="granoclient.Schema.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Schema.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the resource from the server. This is useful when the resource is 
+a shortened index representation which needs to be traded in for a complete
+representation of the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Schema.save">
+<tt class="descname">save</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Schema.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the server with any local changes, then update the local version 
+with the returned value from the server.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="entities">
+<h1>Entities<a class="headerlink" href="#entities" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="granoclient.EntityCollection">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">EntityCollection</tt><big>(</big><em>client</em>, <em>params={}</em><big>)</big><a class="headerlink" href="#granoclient.EntityCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents all the <a class="reference internal" href="#granoclient.Entity" title="granoclient.Entity"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Entity</span></tt></a> currently available
+in this instance of grano. Provides functionality to search for, filter
+and create elements.</p>
+<dl class="method">
+<dt id="granoclient.EntityCollection.all">
+<tt class="descname">all</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.EntityCollection.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over all available resources in the collection.
+This can also be done by just iterating over the collection:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.EntityCollection.by_id">
+<tt class="descname">by_id</tt><big>(</big><em>id</em><big>)</big><a class="headerlink" href="#granoclient.EntityCollection.by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an entity based on its id, i.e. its unique designation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> &#8211; the id of the entity to be retrieved.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.EntityCollection.create">
+<tt class="descname">create</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#granoclient.EntityCollection.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new entity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; A dictionary with the entity attributes, <tt class="docutils literal"><span class="pre">schemata</span></tt> 
+and <tt class="docutils literal"><span class="pre">properties</span></tt> are required.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.EntityCollection.query">
+<tt class="descname">query</tt><big>(</big><em>params=None</em><big>)</big><a class="headerlink" href="#granoclient.EntityCollection.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begin querying the collection. The query can further be refined
+using the methods of the returned <a class="reference internal" href="#granoclient.Query" title="granoclient.Query"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Query</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="granoclient.Entity">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">Entity</tt><big>(</big><em>client</em>, <em>data</em><big>)</big><a class="headerlink" href="#granoclient.Entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>An entity within grano. This type serves as a node, which can be
+used to store data (in the form of properties), and can be part of 
+relations..</p>
+<dl class="attribute">
+<dt id="granoclient.Entity.inbound">
+<tt class="descname">inbound</tt><a class="headerlink" href="#granoclient.Entity.inbound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inbound relations as a filtered
+<a class="reference internal" href="#granoclient.RelationCollection" title="granoclient.RelationCollection"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.RelationCollection</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Entity.outbound">
+<tt class="descname">outbound</tt><a class="headerlink" href="#granoclient.Entity.outbound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outbound relations as a filtered 
+<a class="reference internal" href="#granoclient.RelationCollection" title="granoclient.RelationCollection"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.RelationCollection</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Entity.project">
+<tt class="descname">project</tt><a class="headerlink" href="#granoclient.Entity.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#granoclient.Project" title="granoclient.Project"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Project</span></tt></a> to which this entity belongs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Entity.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Entity.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the resource from the server. This is useful when the resource is 
+a shortened index representation which needs to be traded in for a complete
+representation of the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Entity.save">
+<tt class="descname">save</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Entity.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the server with any local changes, then update the local version 
+with the returned value from the server.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="relations">
+<h1>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="granoclient.RelationCollection">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">RelationCollection</tt><big>(</big><em>client</em>, <em>params={}</em><big>)</big><a class="headerlink" href="#granoclient.RelationCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents all the <a class="reference internal" href="#granoclient.Relation" title="granoclient.Relation"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Relation</span></tt></a> currently available
+in this instance of grano. Provides functionality to search for, filter
+and create elements.</p>
+<dl class="method">
+<dt id="granoclient.RelationCollection.all">
+<tt class="descname">all</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.RelationCollection.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over all available resources in the collection.
+This can also be done by just iterating over the collection:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.RelationCollection.by_id">
+<tt class="descname">by_id</tt><big>(</big><em>id</em><big>)</big><a class="headerlink" href="#granoclient.RelationCollection.by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a relation based on its id, i.e. its unique designation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> &#8211; the id of the relation to be retrieved.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.RelationCollection.create">
+<tt class="descname">create</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#granoclient.RelationCollection.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new relation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; A dictionary with the relation attributes, <tt class="docutils literal"><span class="pre">schema</span></tt> 
+<tt class="docutils literal"><span class="pre">source</span></tt>, <tt class="docutils literal"><span class="pre">target</span></tt> and <tt class="docutils literal"><span class="pre">properties</span></tt> are required.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.RelationCollection.query">
+<tt class="descname">query</tt><big>(</big><em>params=None</em><big>)</big><a class="headerlink" href="#granoclient.RelationCollection.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begin querying the collection. The query can further be refined
+using the methods of the returned <a class="reference internal" href="#granoclient.Query" title="granoclient.Query"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Query</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="granoclient.Relation">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">Relation</tt><big>(</big><em>client</em>, <em>data</em><big>)</big><a class="headerlink" href="#granoclient.Relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A relation within grano. This type serves as a connection between
+two entities, it can also be used to store data (in the form of properties).</p>
+<dl class="attribute">
+<dt id="granoclient.Relation.project">
+<tt class="descname">project</tt><a class="headerlink" href="#granoclient.Relation.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#granoclient.Project" title="granoclient.Project"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Project</span></tt></a> to which this relation belongs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Relation.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Relation.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the resource from the server. This is useful when the resource is 
+a shortened index representation which needs to be traded in for a complete
+representation of the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="granoclient.Relation.save">
+<tt class="descname">save</tt><big>(</big><big>)</big><a class="headerlink" href="#granoclient.Relation.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the server with any local changes, then update the local version 
+with the returned value from the server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Relation.source">
+<tt class="descname">source</tt><a class="headerlink" href="#granoclient.Relation.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source <a class="reference internal" href="#granoclient.Entity" title="granoclient.Entity"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Entity</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Relation.target">
+<tt class="descname">target</tt><a class="headerlink" href="#granoclient.Relation.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target <a class="reference internal" href="#granoclient.Entity" title="granoclient.Entity"><tt class="xref py py-class docutils literal"><span class="pre">granoclient.Entity</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="queries">
+<h1>Queries<a class="headerlink" href="#queries" title="Permalink to this headline">¶</a></h1>
+<p>Queries are re-used whenever a result set needs to be paginated and filtered.</p>
+<dl class="class">
+<dt id="granoclient.Query">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">Query</tt><big>(</big><em>client</em>, <em>clazz</em>, <em>endpoint</em>, <em>params=None</em><big>)</big><a class="headerlink" href="#granoclient.Query" title="Permalink to this definition">¶</a></dt>
+<dd><p>A query is a mechanism to store query state and paginate
+through result sets returned by the server.</p>
+<dl class="method">
+<dt id="granoclient.Query.filter">
+<tt class="descname">filter</tt><big>(</big><em>name</em>, <em>value</em><big>)</big><a class="headerlink" href="#granoclient.Query.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a filter to the query and return a modified version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> &#8211; the name of the query argument to add.</li>
+<li><strong>value</strong> &#8211; the value of the query argument to add.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Query.has_next">
+<tt class="descname">has_next</tt><a class="headerlink" href="#granoclient.Query.has_next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if a next page is available.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Query.has_prev">
+<tt class="descname">has_prev</tt><a class="headerlink" href="#granoclient.Query.has_prev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if a previous page is available.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Query.next">
+<tt class="descname">next</tt><a class="headerlink" href="#granoclient.Query.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a derived query for the next page of elements.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Query.prev">
+<tt class="descname">prev</tt><a class="headerlink" href="#granoclient.Query.prev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a derived query for the previous page of elements.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Query.results">
+<tt class="descname">results</tt><a class="headerlink" href="#granoclient.Query.results" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current page&#8217;s results.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="granoclient.Query.total">
+<tt class="descname">total</tt><a class="headerlink" href="#granoclient.Query.total" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total number of results available (across all pages).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="exceptions">
+<h1>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="granoclient.GranoException">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">GranoException</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#granoclient.GranoException" title="Permalink to this definition">¶</a></dt>
+<dd><p>An exception produced by the grano client library, possibly as part 
+of it&#8217;s interaction with the server.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="granoclient.GranoServerException">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">GranoServerException</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#granoclient.GranoServerException" title="Permalink to this definition">¶</a></dt>
+<dd><p>An exception produced by the grano server. The most common types of 
+errors include:</p>
+<ul class="simple">
+<li>Missing objects (404), i.e. the client requested data that does not 
+exist on the server.</li>
+<li>Invalid inputs (400), i.e. the data submitted by the client did not 
+pass validation - it may be incomplete.</li>
+</ul>
+</dd></dl>
+
+<dl class="class">
+<dt id="granoclient.NotFound">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">NotFound</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#granoclient.NotFound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="granoclient.InvalidRequest">
+<em class="property">class </em><tt class="descclassname">granoclient.</tt><tt class="descname">InvalidRequest</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#granoclient.InvalidRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
