@@ -5,7 +5,7 @@ assets:
 	_env/bin/pygmentize -S default -f html > static/style/pygments.css
 	lessc -x -ru static/style/style.less static/style/style.css
 
-build: assets
+build: assets apidocs
 	jekyll build
 
 _env:
@@ -22,6 +22,8 @@ apidocs_install: _env
 
 apidocs:
 	cd _env/src/grano; git reset --hard HEAD; git pull
+	_env/bin/pip install -r _env/src/grano/requirements.txt
+	_env/bin/pip install -e _env/src/grano
 	rm -rf _includes/apidocs
 	_env/bin/sphinx-build -b html _env/src/grano/docs _includes/apidocs
 	rm -rf _includes/apidocs/.doctrees _includes/apidocs/_modules
