@@ -39,6 +39,7 @@ Once the new configuration is set up, you need to an environment variables point
 
 {% highlight bash %}
 export GRANO_SETTINGS=`pwd`/settings.py
+createdb grano
 grano db upgrade head
 {% endhighlight %}
 
@@ -53,7 +54,7 @@ grano schema_import <projectname> <YOUR_MODEL.yaml>
 To load the demo project:
 
 {% highlight bash %}
-cd demo/demo_simple
+cd ../demo/demo_python
 grano schema_import opennews2 ./model.yaml
 python ./loader.py
 {% endhighlight %}
