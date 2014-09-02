@@ -31,26 +31,59 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
     font-weight: 600;
     color: #444;
-    font-size: 1.2em;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.6em; 
+}
+
+h3 {
+    font-size: 1.4em; 
+}
+
+
+@mixin boxed {
+  background-color: $light-bg-color;
+  border: 1px solid $box-border-color;
+  padding: 1em;
+}
+
+.unboxed {
+    color: $unboxed-text-color;
+
+    h1, h2, h3, h4, h5 {
+        color: $unboxed-text-color;        
+    }
+}
+
+.box {
+    @include boxed;
 }
 
 // Header 
 
 .navbar.navbar-default {
     background-color: #fff;
+    min-height: 60px;
 
     .navbar-brand {
-        color: #222;
+        padding-top: 7px;
+
+        img {
+            height: 45px;
+       }
+    }
+
+    .navbar-text {
+        padding-top: 3px; 
     }
 }
 
@@ -61,7 +94,7 @@ body {
 }
 
 #page {
-    background-color: #fff;
+    b-ackground-color: #fff;
     padding: 0 0 3em 0;
 }
 
@@ -72,6 +105,10 @@ footer {
     a, a:hover {
         color: $footer-foreground;
         font-weight: 600;
+    }
+
+    .right {
+        text-align: right;
     }
 }
 
@@ -89,15 +126,16 @@ a {
 ul.nav.sidebar-menu {
 
     a, ul a {
-        font-weight: 600;
-        padding: 0.2em 0 0.2em 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0.2em 0 0.4em 0.5em;
         display: block;
-        color: #999;
 
         &:hover, &.active {
-            background-color: #fff;
+            background-color: $brand-primary;
+            f-ont-weight: bold;
             text-decoration: none;
-            color: $brand-primary;
+            color: #fff;
         }
     }
 
@@ -106,7 +144,6 @@ ul.nav.sidebar-menu {
     }
 
     ul {
-        font-size: 0.9em;
         padding: 0 0 0 1em;
         list-style-type: none;
     }
@@ -115,6 +152,8 @@ ul.nav.sidebar-menu {
 // Content formatting
 
 .docs-body {
+    @include boxed;
+
     p {
         line-height: 1.4em;
     }
@@ -196,14 +235,14 @@ ul.nav.sidebar-menu {
 }
 
 .showcase {
+    @include boxed;
+
     padding: 1em 0 2em 0;
     margin: 2em 0 1em 0;
 
-    background-color: $footer-background;
-    color: $footer-foreground;
-
-    h2 {
-        margin-bottom: 2em;
+    h3 {
+        margin-bottom: 1em;
+        color: $unboxed-text-color;
     }
 
     a {
