@@ -4,6 +4,7 @@ highlighter: pygments
 permalink: pretty
 
 exclude:
+    - _env/
     - Makefile
     - README.md
     - bower.json

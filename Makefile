@@ -1,7 +1,7 @@
 
 all: build
 
-assets:
+assets: _env
 	_env/bin/pygmentize -S default -f html > static/style/pygments.css
 	
 build: assets apidocs
