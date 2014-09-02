@@ -1,0 +1,40 @@
+
+- title: grano-images
+  description: 'Associate images with entities, e.g. to show profile images. Support resizing and caching.'
+  repo: granoproject/grano-images
+  state: mature
+
+- title: grano-ui
+  description: 'The grano user interface allows users to manage their projects and edit entities, relations and the schema.'
+  repo: granoproject/grano-ui
+  state: beta
+
+- title: grano-reconcile
+  description: 'Adds support for the OpenRefine reconciliation API so you can use a grano project to clean data in Refine.'
+  repo: granoproject/grano-reconcile
+  state: mature
+
+- title: grano-elasticsearch
+  description: 'Builds a full-text search index in ElasticSearch, and makes that search available via the API.'
+  repo: granoproject/grano-elasticsearch
+  state: beta
+
+- title: grano-opencorporates
+  description: 'Looks up entities in the OpenCorporates company database and stores their company ID when there is a match.'
+  repo: granoproject/grano-opencorporates
+  state: beta
+
+- title: grano-ql
+  description: 'Provides an experimental, MQL-inspired query interface for graph searches in grano.'
+  repo: granoproject/grano-ql
+  state: alpha
+
+- title: linked-grano
+  description: 'Duplicates grano data into an RDF triple store and allows users to run graph searches against that data.'
+  repo: pudo/linked-grano
+  state: alpha
+
+- title: grano-neo4j
+  description: 'Duplicates grano data into Neo4J, a graph database.'
+  repo: granoproject/grano-neo4j
+  state: alpha
