@@ -1,6 +1,7 @@
 
 <ul class="nav sidebar-menu">
     {% for page in site.pages %}{% if page.menu_hide == %}{% if page.menu_parent == %}
+    {% if page.title %}
         <li>
             <a href="{{page.url}}">
                 {% if page.menu_title %}{{page.menu_title}}{% else %}{{page.title}}{% endif %}
@@ -13,5 +14,6 @@
                 {% endif %}{% endfor %}
             </ul>
         </li>
+    {% endif %}
     {% endif %}{% endif %}{% endfor %}
 </ul>

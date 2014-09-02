@@ -2,8 +2,8 @@
 layout: default
 title: Features
 description: Features of grano which have already been implemented.
-menu_parent: about/index.md
-permalink: about/features/
+#menu_parent: about/index.md
+permalink: features/
 ---
 
 Grano is a rapidly developing open source software project. This page is intended as a guide of both existing features and an agenda of functions that we're planning to work on in the future.

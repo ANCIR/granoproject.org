@@ -2,6 +2,7 @@
 layout: default
 title: Getting Started
 menu_title: Getting Started
+permalink: gettingstarted/
 ---
 
 As grano is under active development, there isn't currently a hosted instance of the service. The easiest way to get involved is to install the package on a server.

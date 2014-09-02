@@ -2,8 +2,8 @@
 layout: default
 title: License and legal aspects
 menu_title: License
-menu_parent: contributing/index.md
-permalink: contributing/license/
+#menu_parent: contributing/index.md
+permalink: license/
 ---
 
 Grano and most of its extensions are free software following the terms of a MIT License (see below). If you're planning to host proprietary or sensitive data (such as data that may violate legitimate concerns over individual privacy if published to the web), please consider setting up your own instance of the service in a closed and protected network.
