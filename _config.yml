@@ -1,7 +1,7 @@
 safe: true
-markdown: kramdown
+markdown: rdiscount
+highlighter: pygments
 permalink: pretty
-pygments: true
 
 exclude:
     - Makefile
@@ -9,3 +9,8 @@ exclude:
     - bower.json
     - static/style/style.less
     - static/vendor
+
+paginate: 7
+
+sass:
+  style: compressed

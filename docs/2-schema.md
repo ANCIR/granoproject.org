@@ -3,7 +3,7 @@ layout: default
 title: Entity and Relation Schemata
 menu_title: Schemata
 menu_parent: docs/index.md
-permalink: schema/
+permalink: docs/schema/
 ---
 
 To keep the grano data model adaptable to specific use cases, the platform allows users to define so-scalled schemata for each project. They apply either to entities or to relations (never both). While each relation can only be associated with one schema, entities can combine several schemata (e.g. they can be a company, but also a lobby register entry).

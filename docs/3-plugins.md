@@ -3,7 +3,7 @@ layout: default
 title: Plugin Interfaces and Extensions
 menu_title: Plugins
 menu_parent: docs/index.md
-permalink: plugins/
+permalink: docs/plugins/
 ---
 
 grano can be extended through plugins, which are interfaces that will be called at certain points during the execution of the application. Plugins can be bundled into extensions, which are independent Python packages that extend the functionality of grano.

@@ -3,7 +3,7 @@ layout: default
 title: Features
 description: Features of grano which have already been implemented.
 menu_parent: about/index.md
-permalink: features/
+permalink: about/features/
 ---
 
 Grano is a rapidly developing open source software project. Some of the key features of the core engine as well as some extensions are listed here.

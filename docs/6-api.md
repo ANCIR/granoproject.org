@@ -3,7 +3,7 @@ layout: default
 title: Web-based API
 menu_title: Web API
 menu_parent: docs/index.md
-permalink: api/
+permalink: docs/api/
 ---
 
 grano exposes most of it's functionality via a web-based programming interface.The interface communicates mostly using JSON data, and exposes a set of resources, such as projects, schemata, entities, and relations.

@@ -4,7 +4,7 @@ title: Development roadmap
 menu_title: Roadmap
 description: Planned functionality for grano, a toolkit that helps to map influence in government and business.
 menu_parent: contributing/index.md
-permalink: roadmap/
+permalink: contributing/roadmap/
 ---
 
 This roadmap details some of the planned functionality for grano over the next few months. It is intended to give a high-level overview, while detailed descriptions and discussion is publicly available on the [issue tracker](https://github.com/granoproject/grano/issues).

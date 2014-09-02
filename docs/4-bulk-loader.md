@@ -3,7 +3,7 @@ layout: default
 title: Bulk data loading API
 menu_title: Bulk Loading
 menu_parent: docs/index.md
-permalink: bulk/
+permalink: docs/bulk/
 ---
 
 grano has a Python-based bulk loading API that can be used to implement custom data loaders (e.g. as part of an ETL process). The interface uses a factory pattern to generate projects, entities and graphs. The following tutorial assumes that you have grano installed and configured to use a local database.

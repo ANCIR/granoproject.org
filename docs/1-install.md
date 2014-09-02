@@ -3,7 +3,7 @@ layout: default
 title: Installation Guide
 menu_title: Installation
 menu_parent: docs/index.md
-permalink: install/
+permalink: docs/install/
 ---
 
 Grano is intended to be easy to install and modify. If you just want to experiment with the application, you can also explore the development instance at [beta.grano.cc](http://beta.grano.cc).
