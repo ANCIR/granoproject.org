@@ -90,7 +90,4 @@ loader.persist()
 
 ## The interface in detail
 
-<div class="sphinx-include">
-    {% include apidocs/bulk_api.html %}
-</div>
-
+Visit the [grano API documentation](http://grano.readthedocs.org/bulk_api.html)for a detailed overview of the available classes and modules.

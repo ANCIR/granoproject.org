@@ -43,6 +43,5 @@ entry_points={
 
 ## Available plugin interfaces
 
-<div class="sphinx-include">
-    {% include apidocs/interfaces.html %}
-</div>
+Visit the [grano API documentation](http://grano.readthedocs.org/interfaces.html)for a detailed overview of the available classes and modules.
+
