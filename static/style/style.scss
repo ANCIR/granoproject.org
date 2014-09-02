@@ -1,0 +1,218 @@
+---
+---
+
+// Variables
+
+$brand-primary: #ed1c24;
+$brand-highlight: darken($brand-primary, 20%);
+$border-color: #ddd;
+
+$bg-color: #f3f3f3;
+$light-bg-color: #ffffff;
+$box-border-color: darken($light-bg-color, 7%);
+$selected-color: #e7e7e7;
+$unboxed-text-color: darken($bg-color, 50%);
+
+$footer-background: $bg-color;
+$footer-foreground: $unboxed-text-color;
+
+
+.container-fixed, .jumbotron .container-fixed {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+// Base layout 
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+// Header 
+
+.navbar.navbar-default {
+    background-color: #fff;
+
+    .navbar-brand {
+        color: #222;
+    }
+}
+
+// Footer 
+
+body {
+    background-color: $footer-background;
+}
+
+#page {
+    background-color: #fff;
+    padding: 0 0 3em 0;
+}
+
+footer {
+    color: $footer-foreground;
+    padding: 2em 0 2em 0;
+
+    a, a:hover {
+        color: $footer-foreground;
+        font-weight: 600;
+    }
+}
+
+a {
+    color: $brand-primary;
+
+    &:hover {
+        color: $brand-highlight;
+    }
+}
+
+
+// Side bar menu 
+
+ul.nav.sidebar-menu {
+
+    a, ul a {
+        font-weight: 600;
+        padding: 0.2em 0 0.2em 0;
+        display: block;
+        color: #999;
+
+        &:hover, &.active {
+            background-color: #fff;
+            text-decoration: none;
+            color: $brand-primary;
+        }
+    }
+
+    ul a {
+        font-weight: normal;
+    }
+
+    ul {
+        font-size: 0.9em;
+        padding: 0 0 0 1em;
+        list-style-type: none;
+    }
+}
+
+// Content formatting
+
+.docs-body {
+    p {
+        line-height: 1.4em;
+    }
+
+    li {
+        padding-bottom: 0.3em;
+        line-height: 1.4em;
+    }
+
+    pre {
+        border: 0;
+    }
+
+    code {
+        color: #222;
+        padding: 0;
+        background-color: inherit;
+    }
+
+    .sphinx-include {
+        h1 {
+            font-size: 1.2em;
+        }
+
+        .headerlink, .viewcode-link {
+            display: none;
+        }
+
+        .pre {
+            color: #222;
+        }
+
+        dd {
+            padding: 0.2em 0 0.2em 1em;
+        }
+    }
+}
+
+
+
+// Home page specific items 
+
+@mixin cover-background {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.opener {
+  @include cover-background;
+  background-image: url(../images/home.png);
+  min-height: 25em;
+  position: relative;
+  margin-right: -15%;
+  margin-left: -15%;
+  margin-top: -2em;
+  margin-bottom: 2em;
+
+  .tagline {
+    font-size: 2em;
+    position: absolute;
+    bottom: 1em;
+    right: 12%;
+    max-width: 60%;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: $brand-primary;
+    color: #fff;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+  }
+
+}
+
+.claim {
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+
+.showcase {
+    padding: 1em 0 2em 0;
+    margin: 2em 0 1em 0;
+
+    background-color: $footer-background;
+    color: $footer-foreground;
+
+    h2 {
+        margin-bottom: 2em;
+    }
+
+    a {
+        font-weight: 600;
+    }
+
+    .caption {
+        margin-top: 1em;
+        padding-left: 1em;
+        font-size: 0.9em;
+    }
+}

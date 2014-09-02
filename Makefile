@@ -3,8 +3,7 @@ all: build
 
 assets:
 	_env/bin/pygmentize -S default -f html > static/style/pygments.css
-	lessc -x -ru static/style/style.less static/style/style.css
-
+	
 build: assets apidocs
 	jekyll build
 
@@ -33,8 +32,6 @@ apidocs:
 	rm -rf _includes/apidocs/objects.inv _includes/apidocs/index.html
 
 install: _env apidocs_install
-	sudo npm install -g bower less
-	bower install
 
 serve:
 	jekyll serve -w
