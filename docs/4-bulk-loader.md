@@ -50,7 +50,7 @@ Let's create an entity:
 
 {% highlight python %}
 # Each entity has a list of schemata assciated with it:
-alice = loader.make_entity(['my_entity_schema'])
+alice = loader.make_entity('my_entity_schema')
 
 # Set some properties. 'name' is part of the default schema
 alice.set('name', 'Alice')
@@ -65,7 +65,7 @@ alice.save()
 Once we create a second entity, we can then establish a relation between both:
 
 {% highlight python %}
-bob = loader.make_entity([])
+bob = loader.make_entity('Entity')
 bob.set('name', 'Bob')
 bob.save()
 

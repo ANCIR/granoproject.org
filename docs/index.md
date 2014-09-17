@@ -13,8 +13,7 @@ The design goal for grano is to support the following basic features:
 * For each entity or relation, a set of *properties* is stored which signify
   individual attributes of an element. Properties are formalized using a 
   *schema*, which specifies the set of property names that are available.
-  Relations can only be associated with one schema, entities can combine
-  multiple [schemata](/docs/schema).
+  Each relation and entity is associated with exactly one [schema](/docs/schema).
 
 * Each property also stores information on who set it, when and what URL 
   they gave as a source for this fact. Previous values of the same

@@ -15,7 +15,7 @@ These instructions are for making a developer installation of grano. If you want
 Before installing grano, make sure you have the following dependencies available on your system (consider using [Vagrant](http://www.vagrantup.com/) or [Docker](http://docker.io) to isolate the project):
 
 * Python 2.7 and [virtualenv](http://www.virtualenv.org/en/latest/)
-* Postgres 9.3 or newer
+* Postgres 9.3 or newer (other databases will not work)
 
 When you set up grano, first check out the application from GitHub, create a virtual environment and install the Python dependencies:
 

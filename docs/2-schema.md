@@ -6,14 +6,14 @@ menu_parent: docs/index.md
 permalink: docs/schema/
 ---
 
-To keep the grano data model adaptable to specific use cases, the platform allows users to define so-scalled schemata for each project. They apply either to entities or to relations (never both). While each relation can only be associated with one schema, entities can combine several schemata (e.g. they can be a company, but also a lobby register entry).
+To keep the grano data model adaptable to specific use cases, the platform allows users to define so-scalled schemata for each project. They apply either to entities or to relations (never both). Each entity and relation can only be associated with a single schema.
 
 The main task of a schema is to define a set of attributes, which describe what fields can be filled with data for an entity or relation. 
 
 
 ## Base schema
 
-All entities are automatically associated with the ``base`` schema. This schema defines a ``name`` property which is used to identify entities (including the option to define aliases).
+All schemata automatically inherit attributes from the entity or relation base schema. For entities, this schema defines a ``name`` property which is used to identify entities (including the option to define aliases).
 
 
 ## Importing and exporting schemata

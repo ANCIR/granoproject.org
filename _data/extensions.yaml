@@ -24,11 +24,6 @@
   repo: granoproject/grano-opencorporates
   state: beta
 
-- title: grano-ql
-  description: 'Provides an experimental, MQL-inspired query interface for graph searches in grano.'
-  repo: granoproject/grano-ql
-  state: alpha
-
 - title: linked-grano
   description: 'Duplicates grano data into an RDF triple store and allows users to run graph searches against that data.'
   repo: pudo/linked-grano
