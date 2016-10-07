@@ -1,5 +1,5 @@
 safe: true
-markdown: rdiscount
+markdown: kramdown
 highlighter: pygments
 permalink: pretty
 
